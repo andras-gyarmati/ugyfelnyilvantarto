@@ -1,0 +1,172 @@
+Address:
+
+GET: http://localhost:8080/client_registry-web/rest/addresses/1
+POST: http://localhost:8080/client_registry-web/rest/addresses
+PUT: http://localhost:8080/client_registry-web/rest/addresses
+DEL: http://localhost:8080/client_registry-web/rest/addresses/10
+
+JSON:
+{
+  "id": 10,
+  "zipCode": "1192",
+  "state": "Budapest",
+  "country": "Hungary",
+  "city": "Budapest",
+  "street": "Peterdy utca 65"
+}
+
+Client:
+
+GET: http://localhost:8080/client_registry-web/rest/clients/1
+POST: http://localhost:8080/client_registry-web/rest/clients
+PUT: http://localhost:8080/client_registry-web/rest/clients
+DEL: http://localhost:8080/client_registry-web/rest/clients/10
+
+JSON: 
+{
+  "id": 10,
+  "name": "Nagy Bela",
+  "taxNumber": "8413941007",
+  "logo": "logo21.png",
+  "addressId": 1,
+  "contactPersonIdList": [],
+  "projectsIdList": [],
+  "eventsIdList": []
+}
+
+ContactChannel:
+
+GET: http://localhost:8080/client_registry-web/rest/contactchannels/1
+POST: http://localhost:8080/client_registry-web/rest/contactchannels
+PUT: http://localhost:8080/client_registry-web/rest/contactchannels
+DEL: http://localhost:8080/client_registry-web/rest/contactchannels/10
+
+JSON:
+ {
+  "id": 10,
+  "type": "EMAIL",
+  "contactChannelValue": "busines2s@ownmail.com",
+  "personId": 3
+}
+
+ContactPerson:
+
+GET: http://localhost:8080/client_registry-web/rest/contactpersons/3
+POST: http://localhost:8080/client_registry-web/rest/contactpersons
+PUT: http://localhost:8080/client_registry-web/rest/contactpersons
+DELETE: http://localhost:8080/client_registry-web/rest/contactpersons/30
+
+JSON: 
+{
+  "id": 30,
+  "firstName": "Hajnalkaaaa",
+  "lastName": "Munkus",
+  "position": "SALES",
+  "profilePicturePath": "picture33.jpg",
+  "contactChannelIdList": [],
+  "clientId": 1
+}
+
+Event:
+
+GET: http://localhost:8080/client_registry-web/rest/events/1
+POST: http://localhost:8080/client_registry-web/rest/events
+PUT: http://localhost:8080/client_registry-web/rest/events
+DELETE: http://localhost:8080/client_registry-web/rest/contactpersons/10
+
+JSON: 
+{
+  "id": 10,
+  "type": "OPENING",
+  "startDate": "2017-05-17",
+  "finishDate": "2017-05-17",
+  "eventName": "Opening",
+  "clientId": 2,
+  "addressId": 3,
+  "noteIdList": [],
+  "invitationIdList": []
+}
+
+Invitation:
+
+GET: http://localhost:8080/client_registry-web/rest/invitations/1
+POST: http://localhost:8080/client_registry-web/rest/invitations
+PUT: http://localhost:8080/client_registry-web/rest/invitations
+DELETE: http://localhost:8080/client_registry-web/rest/invitations/10
+
+JSON: 
+{
+  "id": 10,
+  "description": "You are cordially invited to our IT Conference",
+  "eventId": 2,
+  "status": "GOING"
+}
+
+Note:
+
+GET: http://localhost:8080/client_registry-web/rest/notes/1
+POST: http://localhost:8080/client_registry-web/rest/notes
+PUT: http://localhost:8080/client_registry-web/rest/notes
+DELETE: http://localhost:8080/client_registry-web/rest/notes/10
+
+JSON:
+{
+  "id": 10,
+  "title": "Have to invite Mr.Peter",
+  "content": "Need to call him",
+  "personId": 1,
+  "eventId": 2
+}
+
+Person:
+
+GET: http://localhost:8080/client_registry-web/rest/people/1
+POST: http://localhost:8080/client_registry-web/rest/people
+PUT: http://localhost:8080/client_registry-web/rest/people
+DELETE: http://localhost:8080/client_registry-web/rest/people/10
+
+JSON:
+{
+  "id": 30,
+  "firstName": "Zoltan",
+  "lastName": "Virag",
+  "position": "MANAGER",
+  "profilePicturePath": "picture10.jpg",
+  "contactChannelIdList": []
+}
+
+Project:
+
+GET: http://localhost:8080/client_registry-web/rest/projects/1
+POST: http://localhost:8080/client_registry-web/rest/projects
+PUT: http://localhost:8080/client_registry-web/rest/projects
+DELETE: http://localhost:8080/client_registry-web/rest/projects/10
+
+JSON:
+{
+  "id": 10,
+  "projectName": "Mobile application 2",
+  "deadline": "2017-09-20",
+  "projectState": "DESIGN",
+  "clientId": 2
+}
+
+User:
+
+GET: http://localhost:8080/client_registry-web/rest/users/2
+POST: http://localhost:8080/client_registry-web/rest/users
+PUT: http://localhost:8080/client_registry-web/rest/users
+DELETE: http://localhost:8080/client_registry-web/rest/users/50
+
+JSON:
+{
+  "id": 50,
+  "firstName": "Zoltan",
+  "lastName": "Varga",
+  "position": "DEVELOPER",
+  "profilePicturePath": "picture50.jpg",
+  "contactChannelIdList": [],
+  "username": "Zoli50",
+  "password": "aA12.,",
+  "roleIdList": []
+}

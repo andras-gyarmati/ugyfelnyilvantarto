@@ -1,0 +1,59 @@
+Kliens
+
+Main osztályban csak fv hívások
+
+Index.java:
+	1. Login.java
+	2. Registration.java
+	3. PageVisits.java
+
+Login.java:
+	username:
+	password:
+	pagesize:
+	LoggedIn.java
+		lekérni a user-t egy user típusú változóba
+		lapozóméretet az elöbb bekért pagesize-ból letárolni
+
+MainMenu.java
+
+1. Adatok szerkesztése (strategy pattern):
+	user (ennek a usernek az id-ja)
+		firstname
+		lastname
+		password
+		picture
+	admin (szerkeszteni kívánt user id-ja)
+		firstname
+		lastname
+		picture
+		position
+		username
+		password
+
+2. Kliensek:
+	1. létrehozás (adatait megadni)
+		address(uj)
+		contactperson(uj)
+		contactchannel(uj)
+	2. törlés
+
+3. Projektek:
+	1. létrehozás(kliens id)
+	2. projekt állapot módosítás (enum)
+	3. törlés
+
+4. Események:
+	1. létrehozás (adatait megadni, kliens id)
+		address(új)
+		meghívó(új)
+	2. jegyzet létrehozás (adott belépett user id)
+	3. meghívó állapot szerkesztés
+	4. törlés
+
+5. Lekérdezések:
+	1. Adott projekthez tartozó kapcsolattartó személy elérhetőségei.
+	2. Adott ügyfélhez tartozó események publikus jegyzetei, amiket a résztvevők írtak.
+	3. Olyan ügyfelek, akikhez az elmúlt "n" hónapban nem tartozott esemény
+	4. Azok a projektek, amiknek a határideje ezen a héten van.
+	5. Plusz egy a csapat által definiált lekérdezés (legalább 1 where meg egy join).

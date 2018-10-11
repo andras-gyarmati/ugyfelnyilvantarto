@@ -1,0 +1,9 @@
+{
+  "id": 1000,
+  "firstName": "Update",
+  "lastName": "User",
+  "position": "DEVELOPER",
+  "profilePicture": "picture1000.jpg",
+  "username": "new",
+  "password": "new"
+}

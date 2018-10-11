@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="ClientRegistryPU" transaction-type="JTA">
+        <jta-data-source>java:/clientRegistryDB</jta-data-source>
+        <class>xyz.codingmentor.team3.registry.entity.address.Address</class>
+        <class>xyz.codingmentor.team3.registry.entity.contactchannel.ContactChannel</class>
+        <class>xyz.codingmentor.team3.registry.entity.client.Client</class>
+        <class>xyz.codingmentor.team3.registry.entity.contactperson.ContactPerson</class>
+        <class>xyz.codingmentor.team3.registry.entity.event.Event</class>
+        <class>xyz.codingmentor.team3.registry.entity.invitation.Invitation</class>
+        <class>xyz.codingmentor.team3.registry.entity.note.Note</class>
+        <class>xyz.codingmentor.team3.registry.entity.person.Person</class>
+        <class>xyz.codingmentor.team3.registry.entity.project.Project</class>
+        <class>xyz.codingmentor.team3.registry.entity.user.User</class>
+        <class>xyz.codingmentor.team3.registry.entity.role.Role</class>
+        <class>xyz.codingmentor.team3.registry.entity.viewcount.ViewCount</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+        </properties>
+    </persistence-unit>
+</persistence>

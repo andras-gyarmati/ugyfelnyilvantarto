@@ -1,0 +1,16 @@
+copy postgresql-9.4.1212.jar ${WILDFLY-HOME}/bin 
+
+Create jdbc module, driver, data source:
+1. Start WildFly server.
+2. Start jboss-cli.bat ${WILDFLY-HOME}/bin
+3. enter the following commands:
+	[disconnected /] connect
+	[standalone@localhost:9990 /] module add --name=org.postgres --resources=postgresql-9.4.1212.jar --dependencies=javax.api,javax.transaction.api
+	[standalone@localhost:9990 /] /subsystem=datasources/jdbc-driver=postgres:add(driver-name="postgres",driver-module-name="org.postgres",driver-class-name=org.postgresql.Driver)
+	[standalone@localhost:9990 /] data-source add --jndi-name=java:/clientRegistryDB --name=clientRegistryDB-pool --connection-url=jdbc:postgresql://localhost/clientRegistryDB --driver-name=postgres --user-name=postgres --password=postgres
+	[standalone@localhost:9990 /] exit
+	
+Or use the standalone-full.xml file and run the following commands:
+	[disconnected /] connect
+	[standalone@localhost:9990 /] module add --name=org.postgres --resources=postgresql-9.4.1212.jar --dependencies=javax.api,javax.transaction.api
+	[standalone@localhost:9990 /] exit

@@ -1,0 +1,4 @@
+Add,Remove,Update,Invite
+participant,participants,organiser,organisers
+Detailed,Very specific,Masterfully constructed
+instructions,information,guidance

@@ -1,0 +1,2 @@
+jms-topic add --topic-address=CreationTopic --entries=java:/jms/creation
+jms-topic add --topic-address=DeletionTopic --entries=java:/jms/deletion
